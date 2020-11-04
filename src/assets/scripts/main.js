@@ -5,7 +5,8 @@
 
 // import 'some-node-module';
 // import SomeModule from 'some-node-module';
-
+import "@fortawesome/fontawesome-free/css/all.css";
+import 'bootstrap';
 /**
  * Write any other JavaScript below
  */

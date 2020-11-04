@@ -40,5 +40,10 @@
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
 }
