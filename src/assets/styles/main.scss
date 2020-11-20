@@ -3,6 +3,7 @@
  */
 
 @import "variables";
+@import "mixins";
 
 /**
  * Import npm dependencies
@@ -18,6 +19,8 @@
  * It's a best practice to use a partial for each page
  */
 
+@import "layouts/menu";
+@import "layouts/footer";
 @import "layouts/home";
 
 /**
