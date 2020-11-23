@@ -1,38 +1,43 @@
 .header {
-    &__item {
-        @include displayflx(row, center);
-        .header__logo--size  {
-            width: 100px;
-        }
+  &__item {
+    @include displayflx(row, center);
+
+    .header__logo--size {
+      width: 100px;
     }
-    &__item__nav {
-        .header__nav {
-            width: 100%;
-            @include displayflx(row, center);
-            .nav__item {
-                padding: 0 15px;
-                color: $main-color;
-            }
-        }
+  }
+  
+  &__item__nav {
+    .header__nav {
+      width: 100%;
+
+      @include displayflx(row, center);
+      
+      .nav__item {
+        padding: 0 15px;
+        color: $main-color;
+      }
     }
+  }
 }
 
 @include media-breakpoint-up(sm) {
-    .header {
-        @include displayflx(row, space-between);
-        .nav__item--style{
-            font-family: $font-family;
-            font-size: 13px;
-            color: $main-color;
-            padding: 0 15px;
-        }
-        
+  .header {
+    @include displayflx(row, space-between);
+
+    .nav__item--style {
+      font-family: $font-family;
+      font-size: 13px;
+      color: $main-color;
+      padding: 0 15px;
     }
- }
+  }
+}
 
 /*
 
 @include media-breakpoint-up(md) { ... }
 @include media-breakpoint-up(lg) { ... }
 @include media-breakpoint-up(xl) { ... }
+
 */

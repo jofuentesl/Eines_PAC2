@@ -1,19 +1,20 @@
 @mixin displayflx($flow, $justify) {
-    display:flex;
-    flex-flow: $flow;
-    justify-content: $justify;
-    align-items: center;
+  display: flex;
+  flex-flow: $flow;
+  justify-content: $justify;
+  align-items: center;
 }
 
 @mixin font {
   @font-face {
     font-family: Montserrat;
-    //src: url('path/to/font.eot'); /*IE9 Compat Modes*/
-    src: //url('path/to/font.eot?#iefix') format('embedded-opentype'), /*IE6-IE8 */
-        //url('path/to/font.woff') format('woff'), /*Modern Browsers*/
-        url('../fonts/Montserrat/Montserrat-ExtraBold.ttf') format('truetype'); /*Safari, Android, iOS*/
-        //url('path/to/font.svg#fontName') format('svg'); /*iOS devices*/
+    src:
+      url('path/to/font.eot'), /* IE9 Compat Modes */
+      url('path/to/font.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('path/to/font.woff') format('woff'), /* Modern Browsers */
+      url('../fonts/Montserrat/Montserrat-ExtraBold.ttf') format('truetype'), /* Safari, Android, iOS */
+      ∫url('path/to/font.svg#fontName') format('svg'); /* iOS devices */
     font-weight: normal;
     font-style: normal;
-}
+  }
 }
