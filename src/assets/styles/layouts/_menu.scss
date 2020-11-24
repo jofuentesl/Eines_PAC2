@@ -1,20 +1,26 @@
 .header {
-  &__item {
+  & > .header__item {
     @include displayflx(row, center);
 
-    .header__logo--size {
+    & > .header__logo--size {
       width: 100px;
     }
   }
   
   &__item__nav {
-    .header__nav {
+    & > .header__nav {
       width: 100%;
 
       @include displayflx(row, center);
       
-      .nav__item {
-        padding: 0 15px;
+      & > .nav__item {
+        padding: 15px 15px;
+        color: $main-color;
+      }
+
+      & > .nav__item--style {
+        font-family: $font-family;
+        font-size: 13px;
         color: $main-color;
       }
     }
@@ -25,9 +31,9 @@
   .header {
     @include displayflx(row, space-between);
 
-    .nav__item--style {
+    & > .nav__item--style {
       font-family: $font-family;
-      font-size: 13px;
+      font-size: 1rem;
       color: $main-color;
       padding: 0 15px;
     }

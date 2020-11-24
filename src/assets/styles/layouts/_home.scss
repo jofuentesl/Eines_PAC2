@@ -1,9 +1,14 @@
 
-@supports (display: grid) {
-  .poster {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: header;
-  }
+body {
+  @include layout;
+}
+
+img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 50%;
+}
+
+.content__group {
+  @include displayflx(row, flex-start);
 }
