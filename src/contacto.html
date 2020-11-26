@@ -38,21 +38,21 @@
             </nav>
             <section class="formulario">
                 <h3 class="tittle__contact">Formulario de contacto</h3>
-                <form class="form__contact">
+                <form class="form__contact" method="POST" data-netlify="true">
                     <div class="form-group">
                         <label for="" class="form__label">Nombre:</label>
-                        <input type="text" class="form__input form-control" placeholder="Escribe tu nombre"> 
+                        <input type="text" name="name" class="form__input form-control" placeholder="Escribe tu nombre"> 
                     </div>
                     <div class="form-group">
                         <label for="" class="form__label">Email:</label>
-                        <input type="email" class="form__input form-control" placeholder="Escribe tu email" required> 
+                        <input type="email" name="email" class="form__input form-control" placeholder="Escribe tu email" required> 
                     </div>
                     <div class="form-group">
                         <label for="" class="form__label">Tu consulta:</label>
-                        <textarea class="form-control rounded-0" rows="5" aria-placeholder="Escribe tu consulta..."></textarea>
+                        <textarea name="message" class="form-control rounded-0" rows="5" aria-placeholder="Escribe tu consulta..."></textarea>
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-primary">Enviar</button>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
                     </div>
                 </form>
             </section>
