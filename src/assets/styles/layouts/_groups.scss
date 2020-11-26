@@ -1,0 +1,28 @@
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+.container {
+  padding-bottom: 80px;
+}
+
+.container__groups {
+  @include displayflx(column, space-between);
+}
+
+@include media-breakpoint-up(sm) {
+  .container__groups {
+    @include displayflx(row, space-between);
+  }
+
+  .card-img-top {
+    max-width: 150px;
+    height: auto;
+  }
+}

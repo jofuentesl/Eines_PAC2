@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>Contacto - Roots Sessions</title>
+
+    <!-- Importamos tipografia -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text&display=swap" rel="stylesheet">
+</head>
+    <body class="wrapper">
+        <header class="container header">
+            <div class="header__item">
+                <a class="navbar-brand" href="index.html">
+                <img class="header__logo--size" src="/assets/images/6.svg"/>
+                </a>
+            </div>
+            <div class="header__item header__item__nav">  
+                <nav class="header__nav">
+                    <a class="nav__item nav__item--style" href="index.html">Inicio</a>
+                    <a class="nav__item nav__item--style" href="grupos.html">Grupos</a>
+                    <a class="nav__item nav__item--style" href="noticias.html">Noticias</a>
+                    <a class="nav__item nav__item--style active" href="contacto.html">Contacto</a>
+                </nav>
+            </div> 
+        </header>
+        <main class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Contacto</li>
+                </ol>
+            </nav>
+            <section class="formulario">
+                <h3 class="tittle__contact">Formulario de contacto</h3>
+                <form class="form__contact">
+                    <div class="form-group">
+                        <label for="" class="form__label">Nombre:</label>
+                        <input type="text" class="form__input form-control" placeholder="Escribe tu nombre"> 
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="form__label">Email:</label>
+                        <input type="email" class="form__input form-control" placeholder="Escribe tu email" required> 
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="form__label">Tu consulta:</label>
+                        <textarea class="form-control rounded-0" rows="5" aria-placeholder="Escribe tu consulta..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </section>
+       </main>
+       <div class="container-fluid footer__block">
+           <footer class="container footer">
+               <div>logo</div>
+               <div>menu</div>
+               <div>rss</div>
+            </footer>
+        </div> 
+            <script src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    </body>
+</html>

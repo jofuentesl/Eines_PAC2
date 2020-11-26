@@ -1,14 +1,28 @@
-
+/*
+html,
 body {
-  @include layout;
+  height: 100%;
 }
 
-img {
-  width: 100%;
-  max-width: 250px;
-  border-radius: 50%;
+.wrapper {
+  min-height: 100%;
+  position: relative;
 }
 
-.content__group {
-  @include displayflx(row, flex-start);
+.container {
+  padding-bottom: 80px;
+}
+
+@include mainlayout;
+*/
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.poster {
+  flex: 1;
+  font-family: $font-family-groups;
 }

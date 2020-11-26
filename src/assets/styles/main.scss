@@ -4,6 +4,7 @@
 
 @import "variables";
 @import "mixins";
+@import "extends";
 
 /**
  * Import npm dependencies
@@ -12,6 +13,7 @@
  */
 
 @import "~bootstrap/scss/bootstrap.scss";
+@import "@fortawesome/fontawesome-free/css/all.css";
 
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
@@ -21,8 +23,11 @@
  * It's a best practice to use a partial for each page
  */
 
-@import "layouts/menu";
+@import "layouts/header";
+@import "layouts/footer";
 @import "layouts/home";
+@import "layouts/groups";
+@import "layouts/contact";
 
 /**
  * Do NOT include anything else in this file!
