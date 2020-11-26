@@ -38,7 +38,7 @@
             </nav>
             <section class="formulario">
                 <h3 class="tittle__contact">Formulario de contacto</h3>
-                <form class="form__contact" method="POST" data-netlify="true">
+                <form class="form__contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
                     <div class="form-group">
                         <label for="" class="form__label">Nombre:</label>
                         <input type="text" name="name" class="form__input form-control" placeholder="Escribe tu nombre"> 
@@ -51,9 +51,8 @@
                         <label for="" class="form__label">Tu consulta:</label>
                         <textarea name="message" class="form-control rounded-0" rows="5" aria-placeholder="Escribe tu consulta..."></textarea>
                     </div>
-                    <div class="from-group">
-                        <div>
-                            data-netlify-recaptcha = "true"
+                        <div 
+                            data-netlify-recaptcha="true">
                         </div>
                     </div>
                     <div class="form-group">
