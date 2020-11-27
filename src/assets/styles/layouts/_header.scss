@@ -1,4 +1,8 @@
-
+.wrapper {
+  & > .container {
+    padding-bottom: 15px;
+  }
+}
 .header {
   & > .header__item {
     @include displayflx(row, center);
@@ -8,7 +12,7 @@
     & > .header__nav {
       width: 100%;
 
-      @include displayflx(row, center);
+      @include displayflx(row, space-between);
       
       & > .nav__item {
         padding: 15px 15px;
@@ -16,13 +20,13 @@
       }
 
       & > .nav__item--style {
-        font-family: $font-family;
-        font-size: 13px;
+        @include font($font-family, 400, normal, 0.8rem);
         color: $main-color;
       }
     }
   }
 }
+
 
 .header__logo--size {
   width: 100px;
@@ -31,12 +35,8 @@
 @include media-breakpoint-up(sm) {
   .header {
     @include displayflx(row, space-between);
-
-    & > .nav__item--style {
-      font-family: $font-family;
-      font-size: 1rem;
-      color: $main-color;
-      padding: 0 15px;
-    }
   }
+  .nav__item--style {
+    @include font($font-family, 700, bold, 7rem);
+  }  
 }

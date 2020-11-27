@@ -8,9 +8,6 @@ body {
   position: relative;
 }
 
-.container {
-  padding-bottom: 80px;
-}
 
 .container__groups {
   @include displayflx(column, space-between);
@@ -22,7 +19,6 @@ body {
   }
 
   .card-img-top {
-    max-width: 150px;
-    height: auto;
+    max-width: 100%;
   }
 }
