@@ -1,7 +1,7 @@
 @use "sass:color";
 
 $font-family: 'Montserrat', sans-serif;
-$font-family-groups: 'Big Shoulders Stencil Text', cursive;
+$font-family-groups: 'Big Shoulders Stencil Display', cursive;
 
 /* colors */
 $main-color: #333;
@@ -12,4 +12,4 @@ $theme-colors: (
   "primary": #ff0
 );
 
-$border-radius: 1.5rem;
+$border-radius: 0.2rem;

@@ -9,23 +9,126 @@
   font-family: $font-family-groups;
 }
 
+.font__awesome--style {
+  margin-right: 30px;
+}
+
+.festival__group__ska > p {
+  @include rotate(#f00, -5deg);
+}
+
+.festival__group__toots > p {
+  @include rotate(#008f39, 2deg);
+}
+
+.festival__group__lauren > p {
+  @include rotate(#ff0, -3deg);
+}
+
 @supports (display:grid) {
   .poster {
     display: grid;
-    grid-template-columns: 2fr 4fr 2fr;
-    //grid-template-rows: repeat(8, 2fr);
-    //grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) [col-start]);
-    //grid-template-rows: 25% 100px auto;
-    //grid-template-columns: 150px 150px 150px 150px;
-    grid-template-rows: auto;
-    grid-template-areas:
-      'left-a main-a right-a'
-      'left-b main-b right-b'
-      'left-c main-c right-c';
-    align-items: start;
-    
-    & > .item-a {
-      grid-column: 1 / span 2;
+    grid-template-columns: [x0] 1fr [x1] 1fr [x2];
+    grid-template-rows: [y0] 0.5fr [y1] repeat(5, 2fr);
+  }
+
+  .festival__place {
+    @include font($font-family, 700, normal, 1rem);
+    text-align: center;
+  }
+
+  .festival__date {
+    @extend .festival__place;
+  }
+
+  .festival__name {
+    @include font($font-family, 700, normal, 2rem);
+    text-align: center;
+    grid-column: x0 / x2;
+  }
+
+  .font__awesome--style {
+    margin-right: 15px;
+  }
+
+  .festival__group__ska {
+    @include font($font-family-groups, 700, normal, 2rem);
+    text-align: center;
+    grid-column: x0 / x2;
+  }
+  
+  .festival__group__toots {
+    @extend .festival__group__ska;
+  }
+
+  .festival__group__lauren {
+    @extend .festival__group__ska;
+  }
+
+  .festival__timetable {
+    @extend .festival__place;
+    margin-top: 15px;
+  }
+
+  .festival__center {
+    @extend .festival__timetable;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .poster {
+      grid-template-columns: [x0] 3fr [x1] 6fr [x2] 3fr [x3];
+      grid-template-rows: [y0] 0.5fr [y1] 1.5fr [y2] 1fr [y3];
+      grid-auto-rows: 1fr;
+      grid-gap: 10px;
+
+      & > .festival__place {
+        @include font($font-family, 700, normal, 1.5rem);
+        text-align: center;
+        text-transform: uppercase;
+        margin: auto;
+      }
+
+      & > .festival__date {
+        @include font($font-family, 700, normal, 1.5rem);
+        text-align: center;
+        text-transform: uppercase;
+        margin: auto;
+        grid-column: x2 / x3;
+      }
+
+      & > .festival__name {
+        @include font($font-family, 900, bold, 3rem);
+        text-align: center;
+        text-transform: uppercase;
+        margin: auto;
+        grid-column: x0 / x3;
+      }
+
+      & > .festival__group {
+        text-align: center;
+        text-transform: uppercase;
+        margin: auto;
+        
+        @include font($font-family-groups, 900, bold, 3rem);
+        grid-column: x0 /x3;
+      }
+
+      & > .festival__timetable {
+        @include font($font-family, 700, normal, 1.5rem);
+        text-align: center;
+        text-transform: uppercase;
+        margin: auto;
+        grid-column: x0 / x1;
+      }
+
+      & > .festival__center {
+        @include font($font-family, 700, normal, 1.5rem);
+
+        text-align: center;
+        text-transform: uppercase;
+        margin: auto;
+        grid-column: x2 / x3;
+      }
     }
   }
 }

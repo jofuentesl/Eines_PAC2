@@ -3,6 +3,7 @@
     padding-bottom: 15px;
   }
 }
+
 .header {
   & > .header__item {
     @include displayflx(row, center);
@@ -27,7 +28,6 @@
   }
 }
 
-
 .header__logo--size {
   width: 100px;
 }
@@ -36,7 +36,8 @@
   .header {
     @include displayflx(row, space-between);
   }
+
   .nav__item--style {
     @include font($font-family, 700, bold, 7rem);
-  }  
+  }
 }

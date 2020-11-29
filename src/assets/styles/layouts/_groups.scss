@@ -8,7 +8,6 @@ body {
   position: relative;
 }
 
-
 .container__groups {
   @include displayflx(column, space-between);
 }

@@ -6,6 +6,7 @@
 
 .footer {
   color: #fff;
+  
   @include displayflx(column, space-between);
   @include font($font-family, normal, normal, 1rem);
 }

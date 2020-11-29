@@ -19,3 +19,10 @@
   font-style: $font-style;
   font-size: $font-size;
 }
+
+@mixin rotate($color, $degree) {
+  background-color: $color;
+  margin-bottom: 0;
+  padding: 0 10px;
+  transform: rotate($degree);
+}
