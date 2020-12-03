@@ -21,8 +21,12 @@
       }
 
       & > .nav__item--style {
-        @include font($font-family, 400, normal, 0.8rem);
+        @include font($font-family, 700, bold, 1rem);
         color: $main-color;
+
+        &:hover {
+          color: #ff0;
+        }
       }
     }
   }

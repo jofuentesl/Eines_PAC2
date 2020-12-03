@@ -6,13 +6,42 @@
 
 .footer {
   color: #fff;
+  padding-top: 30px;
   
   @include displayflx(column, space-between);
   @include font($font-family, normal, normal, 1rem);
 }
 
+.rss__block {
+  @include displayflx(row, space-between);
+  list-style: none;
+}
+
+.rss__item {
+  margin-right: 15px;
+}
+
+.rss__item__link {
+  color: #fff;
+  font-size: 2rem;
+}
+
 @include media-breakpoint-up(sm) {
   .footer {
     @include displayflx(row, space-between);
+  }
+
+  .rss__block {
+    @include displayflx(row, space-between);
+    list-style: none;
+  }
+
+  .rss__item {
+    margin-right: 15px;
+  }
+
+  .rss__item__link {
+    color: #fff;
+    font-size: 2rem;
   }
 }

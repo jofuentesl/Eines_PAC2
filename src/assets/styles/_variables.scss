@@ -13,3 +13,7 @@ $theme-colors: (
 );
 
 $border-radius: 0.2rem;
+$breadcrumb-divider: quote(">");
+$breadcrumb-bg: $main-color;
+$breadcrumb-active-color: $secondary-color;
+$link-hover-decoration: none;

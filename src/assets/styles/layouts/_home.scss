@@ -1,6 +1,6 @@
 .wrapper {
   display: flex;
-  min-height: 100vh;
+  max-height: 100vh;
   flex-direction: column;
 }
 
@@ -9,8 +9,42 @@
   font-family: $font-family-groups;
 }
 
+.block__festival__date {
+  @include displayflx(row , space-between);
+}
+
+.festival__place--style {
+  @include font($font-family, 400, normal, 1rem);
+}
+
+.block__festival__name {
+  @include font($font-family, 700, normal, 2rem);
+  padding-top: 1rem;
+  text-align: center;
+}
+ 
+.block__festival__groups {
+  @include displayflx(column , null);
+  padding-top: 0.5rem;
+  margin: auto;
+}
+
+.festival__group--style {
+  @include font($font-family-groups, 700, bold, 2.5rem);
+  padding-top: 1rem;
+  text-transform: uppercase;
+}
+
+.block__festival__timetable {
+  padding-top: 1.5rem;
+}
+
+.block__hidden__mobile {
+  display: none;
+}
+
 .font__awesome--style {
-  margin-right: 30px;
+  margin-right: 5px;
 }
 
 .festival__group__ska > p {
@@ -25,110 +59,91 @@
   @include rotate(#ff0, -3deg);
 }
 
-@supports (display:grid) {
-  .poster {
-    display: grid;
-    grid-template-columns: [x0] 1fr [x1] 1fr [x2];
-    grid-template-rows: [y0] 0.5fr [y1] repeat(5, 2fr);
+@include media-breakpoint-up(sm) {
+  .festival__place--style {
+    @include font($font-family, 700, bold, 1.5rem);
   }
-
-  .festival__place {
-    @include font($font-family, 700, normal, 1rem);
+  
+  .festival__name--style {
+    @include font($font-family, 900, bold, 3rem);
     text-align: center;
+    text-transform: uppercase;
+    margin: auto;
   }
 
-  .festival__date {
-    @extend .festival__place;
+  .block__festival__groups {
+    @include displayflx(column , null);
+    padding-top: 1rem;
+    margin: auto;
+  }
+  
+  .festival__group--style {
+    @include font($font-family-groups, 900, bold, 3rem);
+    padding-top: 25px;
+    text-transform: uppercase;
   }
 
-  .festival__name {
-    @include font($font-family, 700, normal, 2rem);
-    text-align: center;
-    grid-column: x0 / x2;
+  .block__festival__timetable {
+    @include displayflx(row , space-between);
+  }
+
+  .block__hidden__desktop {
+    display: none;
   }
 
   .font__awesome--style {
-    margin-right: 15px;
+    margin-right: 30px;
+  }
+}
+
+@supports (display:grids) {
+  .poster {
+    display: grid;
+    grid-template-columns: [x0] 1fr [x1] 1fr [x2];
+    grid-template-rows: [y0] 0.3fr [y1] 0.5 fr [y2] 1fr [y3] 0.2fr [y4];
   }
 
-  .festival__group__ska {
-    @include font($font-family-groups, 700, normal, 2rem);
-    text-align: center;
+  .block__festival__date {
+    grid-column: x0 / x2;
+  }
+
+  .block__festival__name {
+    grid-column: x0 / x2;
+  }
+
+  .block__festival__groups {
     grid-column: x0 / x2;
   }
   
-  .festival__group__toots {
-    @extend .festival__group__ska;
-  }
-
-  .festival__group__lauren {
-    @extend .festival__group__ska;
-  }
-
-  .festival__timetable {
-    @extend .festival__place;
-    margin-top: 15px;
-  }
-
-  .festival__center {
-    @extend .festival__timetable;
+  .block__festival__timetable {
+    @extend .block__festival__date;
   }
 
   @include media-breakpoint-up(sm) {
     .poster {
       grid-template-columns: [x0] 3fr [x1] 6fr [x2] 3fr [x3];
-      grid-template-rows: [y0] 0.5fr [y1] 1.5fr [y2] 1fr [y3];
-      grid-auto-rows: 1fr;
-      grid-gap: 10px;
+      grid-template-rows: [y0] 0.3fr [y1] 0.5fr [y2] 1fr [y3] 0.3fr [y4];
+    }
+    
+    .block__festival__date {
+      grid-column: x0 / x3;
+    }
 
-      & > .festival__place {
-        @include font($font-family, 700, normal, 1.5rem);
-        text-align: center;
-        text-transform: uppercase;
-        margin: auto;
-      }
+    .block__festival__name {
+      margin: auto;
+      grid-column: x0 / x3;
+    }
 
-      & > .festival__date {
-        @include font($font-family, 700, normal, 1.5rem);
-        text-align: center;
-        text-transform: uppercase;
-        margin: auto;
-        grid-column: x2 / x3;
-      }
+    .block__festival__groups {
+      grid-column: x0 /x3;
+    }
 
-      & > .festival__name {
-        @include font($font-family, 900, bold, 3rem);
-        text-align: center;
-        text-transform: uppercase;
-        margin: auto;
-        grid-column: x0 / x3;
-      }
+    .festival__group--style {
+      @include font($font-family-groups, 900, bold, 3rem);
+    }
 
-      & > .festival__group {
-        text-align: center;
-        text-transform: uppercase;
-        margin: auto;
-        
-        @include font($font-family-groups, 900, bold, 3rem);
-        grid-column: x0 /x3;
-      }
-
-      & > .festival__timetable {
-        @include font($font-family, 700, normal, 1.5rem);
-        text-align: center;
-        text-transform: uppercase;
-        margin: auto;
-        grid-column: x0 / x1;
-      }
-
-      & > .festival__center {
-        @include font($font-family, 700, normal, 1.5rem);
-
-        text-align: center;
-        text-transform: uppercase;
-        margin: auto;
-        grid-column: x2 / x3;
-      }
+    .block__festival__timetable {
+      grid-column: x0 / x3;
     }
   }
 }
