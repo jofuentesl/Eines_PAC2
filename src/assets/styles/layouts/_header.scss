@@ -8,22 +8,18 @@
   & > .header__item {
     @include displayflx(row, center);
   }
-
   &__item__nav {
     & > .header__nav {
       width: 100%;
 
       @include displayflx(row, space-between);
-      
       & > .nav__item {
         padding: 15px 15px;
         color: $main-color;
       }
-
       & > .nav__item--style {
         @include font($font-family, 700, bold, 1rem);
         color: $main-color;
-
         &:hover {
           color: #ff0;
         }
@@ -40,7 +36,6 @@
   .header {
     @include displayflx(row, space-between);
   }
-
   .nav__item--style {
     @include font($font-family, 700, bold, 7rem);
   }

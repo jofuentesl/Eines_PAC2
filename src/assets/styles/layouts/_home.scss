@@ -25,7 +25,7 @@
  
 .block__festival__groups {
   @include displayflx(column , null);
-  padding-top: 0.5rem;
+  padding-top: .5rem;
   margin: auto;
 }
 
@@ -63,58 +63,48 @@
   .festival__place--style {
     @include font($font-family, 700, bold, 1.5rem);
   }
-  
   .festival__name--style {
     @include font($font-family, 900, bold, 3rem);
     text-align: center;
     text-transform: uppercase;
     margin: auto;
   }
-
   .block__festival__groups {
     @include displayflx(column , null);
     padding-top: 1rem;
     margin: auto;
   }
-  
   .festival__group--style {
     @include font($font-family-groups, 900, bold, 3rem);
     padding-top: 25px;
     text-transform: uppercase;
   }
-
   .block__festival__timetable {
     @include displayflx(row , space-between);
   }
-
   .block__hidden__desktop {
     display: none;
   }
-
   .font__awesome--style {
     margin-right: 30px;
   }
 }
 
-@supports (display:grids) {
+@supports (display:grid) {
   .poster {
     display: grid;
     grid-template-columns: [x0] 1fr [x1] 1fr [x2];
-    grid-template-rows: [y0] 0.3fr [y1] 0.5 fr [y2] 1fr [y3] 0.2fr [y4];
+    grid-template-rows: [y0] .3fr [y1] .5 fr [y2] 1fr [y3] .2fr [y4];
   }
-
   .block__festival__date {
     grid-column: x0 / x2;
   }
-
   .block__festival__name {
     grid-column: x0 / x2;
   }
-
   .block__festival__groups {
     grid-column: x0 / x2;
   }
-  
   .block__festival__timetable {
     @extend .block__festival__date;
   }
@@ -122,26 +112,21 @@
   @include media-breakpoint-up(sm) {
     .poster {
       grid-template-columns: [x0] 3fr [x1] 6fr [x2] 3fr [x3];
-      grid-template-rows: [y0] 0.3fr [y1] 0.5fr [y2] 1fr [y3] 0.3fr [y4];
+      grid-template-rows: [y0] .3fr [y1] .5fr [y2] 1fr [y3] .3fr [y4];
     }
-    
     .block__festival__date {
       grid-column: x0 / x3;
     }
-
     .block__festival__name {
       margin: auto;
       grid-column: x0 / x3;
     }
-
     .block__festival__groups {
       grid-column: x0 /x3;
     }
-
     .festival__group--style {
       @include font($font-family-groups, 900, bold, 3rem);
     }
-
     .block__festival__timetable {
       grid-column: x0 / x3;
     }

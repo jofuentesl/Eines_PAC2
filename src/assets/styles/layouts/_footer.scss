@@ -30,16 +30,13 @@
   .footer {
     @include displayflx(row, space-between);
   }
-
   .rss__block {
     @include displayflx(row, space-between);
     list-style: none;
   }
-
   .rss__item {
     margin-right: 15px;
   }
-
   .rss__item__link {
     color: #fff;
     font-size: 2rem;
